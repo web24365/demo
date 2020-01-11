@@ -1,0 +1,5 @@
+{% for post in post_list %}
+    {{ post }}
+    {{ category }}
+    {{ post.comment_set.all }}
+{% endfor %}
