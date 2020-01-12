@@ -1,6 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block blog %}
 <h1>Category List</h1>
 <hr>
 {% for category in category_list %}
     <a href="{% url 'blog:category_detail' category.slug %}">{{ category.slug }}</a>
     <br>
 {% endfor %}
+{% endblock %}

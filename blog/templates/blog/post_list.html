@@ -1,3 +1,6 @@
+{% extends 'blog/base.html' %}
+
+{% block blog %}
 <li>1 {{ category }} </li>
 <li>2 {{ category.slug }} </li>
 <li>3 {{ category.post_set.all }} </li>
@@ -14,3 +17,4 @@
     <a href="{% url 'blog:post_detail' post.category.slug post.slug %}">{{ post.category }} {{ post.title }}<a>
     <hr>
 {% endfor%}
+{% endblock %}

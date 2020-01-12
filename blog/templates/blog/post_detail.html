@@ -1,3 +1,6 @@
+{% extends 'blog/base.html' %}
+
+{% block blog %}
 <h1>Post Detail</h1>
 <hr>
 Category: {{ post.category.slug }}<br>
@@ -11,3 +14,4 @@ TEXT: {{ post.text }}
 {% for comment in post.comment_set.all %}
     {{ comment.id }} : {{ comment.message }}<br>
 {% endfor %}
+{% endblock %}
