@@ -1,3 +1,6 @@
+<h1>Category List</h1>
+<hr>
 {% for category in category_list %}
-    {{ category }}
+    <a href="{% url 'blog:category_detail' category.slug %}">{{ category.slug }}</a>
+    <br>
 {% endfor %}

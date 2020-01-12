@@ -1,0 +1,13 @@
+<h1>Post Detail</h1>
+<hr>
+Category: {{ post.category.slug }}<br>
+TITLE: {{ post.slug }}
+<hr>
+TEXT: {{ post.text }}
+<hr>
+<h1>Comments</h1>
+<hr>
+{% comment %} comment - {{ post.comment }} {% endcomment %}
+{% for comment in post.comment_set.all %}
+    {{ comment.id }} : {{ comment.message }}<br>
+{% endfor %}
